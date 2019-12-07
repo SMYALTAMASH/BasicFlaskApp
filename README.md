@@ -59,11 +59,26 @@ CMD python app.py
 | ADD app/ /app | Copy the code files and static contents. TIP: [Always keep changing data at the last to build the image faster]. |
 | CMD python app.py | Run the flask application at startup. |
 
-### Try out the docker image.
+## Try out the docker image.
+
 ```
 sudo docker run -d -p 1111:5000 --name flaskrestapi kingalt/flask:1.0
 ```
-* Open the browser and play with the flask app.
+
+* Check the logs of the application running.
+
+```
+sudo docker logs -f flaskrestapi
+```
+
+* TO Remove the conatiner
+
+```
+sudo docker rm -f flaskrestapi
+```
+
+## API ENDPOINTS
+
 * There are 3 APIS which are exposed by the APP.
 
 | API-ENDPOINT | DESCRIPTION |
@@ -72,15 +87,7 @@ sudo docker run -d -p 1111:5000 --name flaskrestapi kingalt/flask:1.0
 | "http://localhost:1111/myinfo" | This gives the developer description. |
 | "http://localhost:1111/status" | This gives the health check details of the API. |
 
-* Check the logs of the application running.
-```
-sudo docker logs -f flaskrestapi
-```
-
-* TO Remove the conatiner
-```
-sudo docker rm -f flaskrestapi
-```
+* Open the browser and play with these flask app API's.
 
 ## App file description
 ```
