@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>This is my webiste</title>
+		<style type="text/css">
+	                body
+	                {
+	                        background-image: url("{{url_for('static',filename='tiger.jpg')}}");
+	                        background-repeat:no-repeat;
+	                    	background-size:cover;
+	                        color: red;
+	                        text-align: center;
+	                        font-size: 22px;
+	                }
+	        </style> 
+	</head>
+	<body>
+	<h2>Please Enter The Details<h2>
+		<form action="process.php" method="GET">
+			<fieldset>
+				<label>Name:<input type="text" name="name" required placeholder="Enter your name"></label><br>
+				<label>Place:<input type="text" name="place" required placeholder="Enter your place"></label><br>
+				<input type="submit" value="Submit!">
+			</fieldset>
+		</form>
+	</body>
+</html>
