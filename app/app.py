@@ -34,5 +34,9 @@ def status():
         endtime=logEndTime
     )
 
+@app.errorhandler(404) 
+def invalid_route(e): 
+    return render_template('index.html')
+
 if __name__ == '__main__':
     app.run(debug=False,host='0.0.0.0')
