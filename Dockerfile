@@ -1,4 +1,5 @@
 FROM python:3
+MAINTAINER "S M Y ALTAMSH <smy.altamash@gmail.com>"
 WORKDIR /app
 ADD app/requirements.txt /app
 RUN apt-get update
