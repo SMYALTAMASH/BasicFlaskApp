@@ -12,8 +12,8 @@ def first():
 @app.route("/myinfo", methods = ['GET'])
 def myinfo():
     return jsonify(
-        user="king",
         quote="The King Never Fails To Win His Destiny",
+        name="S M Y ALTAMSH",
         profession="DevOps Engineer",
         github="https://github.com/smyaltamash/",
         status="200"
