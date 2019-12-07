@@ -93,8 +93,14 @@ def myinfo():
         github="https://github.com/smyaltamash/",
         status="200"
     )
+
+@app.errorhandler(404)
+def invalid_route(e):
+    return render_template('index.html')
+
 ```
 
 * @app.route("/myinfo", methods = ['GET']) # This indicates the API ENDPOINT for the flask application and the allowed method is "GET".
 * Below this flask API Definition we can have python functions and perform various operations on the data.
 * return jsonify # This is used to return json responses, the First part is the key and the second part is the value.
+* @app.errorhandler(404) # This is like an error handler for the image if we get 404 status code the below function will be called.
