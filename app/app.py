@@ -4,12 +4,12 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods = ['GET'])
 def first():
     return render_template('index.html')
 
 
-@app.route("/myinfo")
+@app.route("/myinfo", methods = ['GET'])
 def myinfo():
     return jsonify(
         user="king",
@@ -19,7 +19,7 @@ def myinfo():
         status="200"
     )
 
-@app.route('/status')
+@app.route('/status', methods = ['GET'])
 def status():
     StartTime = datetime.now()
     logStartTime = StartTime.strftime("%d/%m/%Y %H:%M:%S:%f")
