@@ -59,6 +59,18 @@ CMD python app.py
 | ADD app/ /app | Copy the code files and static contents. TIP: [Always keep changing data at the last to build the image faster]. |
 | CMD python app.py | Run the flask application at startup. |
 
+### Try out the docker image.
+```
+sudo docker run -d -p 1111:5000 kingalt/flask:1.0
+```
+* Open the browser and play with the flask app.
+* There are 3 APIS which are exposed by the APP.
+| API ENDPOINT | Description |
+| --- | --- |
+| "http://localhost:1111/" | This Displays the starting page |
+| "http://localhost:1111/myinfo" | This gives the developer description |
+| "http://localhost:1111/status" | This gives the health check details of the API |
+
 ## App file description
 ```
 @app.route("/myinfo", methods = ['GET'])
