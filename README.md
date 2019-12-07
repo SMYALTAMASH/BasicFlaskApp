@@ -61,7 +61,7 @@ CMD python app.py
 
 ### Try out the docker image.
 ```
-sudo docker run -d -p 1111:5000 kingalt/flask:1.0
+sudo docker run -d -p 1111:5000 --name flaskrestapi kingalt/flask:1.0
 ```
 * Open the browser and play with the flask app.
 * There are 3 APIS which are exposed by the APP.
@@ -71,6 +71,11 @@ sudo docker run -d -p 1111:5000 kingalt/flask:1.0
 | "http://localhost:1111/" | This Displays the starting page. |
 | "http://localhost:1111/myinfo" | This gives the developer description. |
 | "http://localhost:1111/status" | This gives the health check details of the API. |
+
+* Check the logs of the application running.
+```
+sudo docker logs -f flaskrestapi
+```
 
 ## App file description
 ```
