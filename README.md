@@ -48,14 +48,14 @@ ADD app/ /app
 CMD python app.py
 ```
 
-* FROM python:3 # specifies the OS/Base Image from which the application is getting built.
-* MAINTAINER "S M Y ALTAMSH <smy.altamash@gmail.com>" # Maintainer Details.
-* WORKDIR /app # Our Flask Application code resides in /app of the docker container so changing directory to /app.
-* ADD app/requirements.txt /app # copying only "requirements.txt" to install flask dependencies.
-* RUN apt-get update # Updating the docker cache and refreshing the container image repositories.
-* RUN pip install -r requirements.txt # Installing the dependencies in the container image.
-* ADD app/ /app # Copy the code files and static contents. TIP: [Always keep changing data at the last to build the image faster].
-* CMD python app.py # Run the flask application at startup.
+| FROM python:3 | specifies the OS/Base Image from which the application is getting built. |
+| MAINTAINER "S M Y ALTAMSH <smy.altamash@gmail.com>" | Maintainer Details. |
+| WORKDIR /app | Our Flask Application code resides in /app of the docker container so changing directory to /app. |
+| ADD app/requirements.txt /app | copying only "requirements.txt" to install flask dependencies. |
+| RUN apt-get update | Updating the docker cache and refreshing the container image repositories. |
+| RUN pip install -r requirements.txt | Installing the dependencies in the container image. |
+| ADD app/ /app | Copy the code files and static contents. TIP: [Always keep changing data at the last to build the image faster]. |
+| CMD python app.py | Run the flask application at startup. |
 
 ## App file description
 ```
