@@ -65,7 +65,7 @@ sudo docker run -d -p 1111:5000 kingalt/flask:1.0
 ```
 * Open the browser and play with the flask app.
 * There are 3 APIS which are exposed by the APP.
-| API ENDPOINT | Description |
+| API-ENDPOINT | Description |
 | --- | --- |
 | "http://localhost:1111/" | This Displays the starting page |
 | "http://localhost:1111/myinfo" | This gives the developer description |
