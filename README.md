@@ -77,6 +77,11 @@ sudo docker run -d -p 1111:5000 --name flaskrestapi kingalt/flask:1.0
 sudo docker logs -f flaskrestapi
 ```
 
+* TO Remove the conatiner
+```
+sudo docker rm -f flaskrestapi
+```
+
 ## App file description
 ```
 @app.route("/myinfo", methods = ['GET'])
