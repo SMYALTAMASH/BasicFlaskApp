@@ -48,6 +48,8 @@ ADD app/ /app
 CMD python app.py
 ```
 
+| COMMAND | DESCRIPTION |
+| --- | --- |
 | FROM python:3 | specifies the OS/Base Image from which the application is getting built. |
 | MAINTAINER "S M Y ALTAMSH <smy.altamash@gmail.com>" | Maintainer Details. |
 | WORKDIR /app | Our Flask Application code resides in /app of the docker container so changing directory to /app. |
