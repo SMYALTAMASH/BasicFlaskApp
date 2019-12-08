@@ -17,25 +17,6 @@ sudo docker run -d -p someFreeSystemPort:5000 kingsflaskapp:latest # Replace som
 ```
 * Congratulations your flask app is up and running, now open the Browser and you can see the Flask App Up and Running.
 
-## Tree Structure of the flask app
-
-```
-.
-├── app
-│   ├── app.py
-│   ├── requirements.txt
-│   ├── static
-│   │   └── tiger.jpg
-│   └── templates
-│       └── index.html
-```
-
-* "app" directory contains the Entire Flask Application
-* The File "app.py" contains the application code
-* The File "requirements.txt" contains the pre-requisites for the flask app to work.
-* static contents of the html files like images go inside the "static" directory.
-* "templates" folder contains the html pages that our app.py uses to render the website.
-
 ## Dockerfile Description
 ```
 FROM python:3
@@ -88,6 +69,25 @@ sudo docker rm -f flaskrestapi
 | "http://localhost:1111/status" | This gives the health check details of the API. |
 
 * Open the browser and play with these flask app API's.
+
+## Tree Structure of the flask app
+
+```
+.
+├── app
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── static
+│   │   └── tiger.jpg
+│   └── templates
+│       └── index.html
+```
+
+* "app" directory contains the Entire Flask Application
+* The File "app.py" contains the application code
+* The File "requirements.txt" contains the pre-requisites for the flask app to work.
+* static contents of the html files like images go inside the "static" directory.
+* "templates" folder contains the html pages that our app.py uses to render the website.
 
 ## App file description
 ```
