@@ -145,3 +145,4 @@ import requests
 | --- | --- |
 | flask/Flask | installing dependencies for the flask framework |
 | flask-events | used to record Flask Events [https://github.com/get-wrecked/flask-events] |
+| requests | used to call the http/s endpoints and get the status code |
