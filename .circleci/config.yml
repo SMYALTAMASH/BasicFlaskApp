@@ -6,4 +6,4 @@ jobs:
     steps:
       - checkout
       - run: pip3 install -r app/requirements.txt
-      - run: python app/app.py
+      - run: pyflakes app/app.py

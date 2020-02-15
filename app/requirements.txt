@@ -2,3 +2,5 @@ flask
 Flask
 flask-events
 requests
+pytest
+pyflakes
