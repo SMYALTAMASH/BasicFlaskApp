@@ -1,5 +1,5 @@
 import logging
-from flask import jsonify, Flask, render_template, url_for
+from flask import jsonify, Flask, render_template
 from flask_events import Events
 from datetime import datetime
 import requests
