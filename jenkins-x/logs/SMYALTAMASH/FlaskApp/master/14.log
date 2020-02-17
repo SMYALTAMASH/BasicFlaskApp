@@ -1,0 +1,66 @@
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-xxj7h[0m
+{"level":"warn","ts":1581924701.5996134,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581924701.6000547,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-znxwc[0m
+{"level":"warn","ts":1581924702.2558165,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581924702.2571623,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-smyaltamash-flaskapp-master-qmkgk-z8k2q[0m
+{"level":"warn","ts":1581924710.276007,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581924715.3939588,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/SMYALTAMASH/FlaskApp.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:07fa35e77a03dabc35d9826b5fa4946ebcdd2a4d
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32msmyaltamash-flaskapp-master-qmkgk-14[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:3.6-alpine     
+2020/02/17 07:31:56 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:546d79a1498f299ed2903d6ba0aceee86a1d5a519c096c807e1b186a8450ece1: no such file or directory 
+[36mINFO[0m[0002] Downloading base image python:3.6-alpine     
+2020/02/17 07:31:59 No matching credentials were found, falling back on anonymous
+[33mWARN[0m[0004] maintainer is deprecated, skipping           
+[36mINFO[0m[0004] Using files from context: [/workspace/source/app/requirements.txt] 
+[36mINFO[0m[0004] Checking for cached layer dc2020.azurecr.io/todo/cache:fc8417433279a96c3cac495612f7b14bbed6174114b05e6edcf351e1895cea27... 
+[36mINFO[0m[0005] Using caching version of cmd: RUN apk update 
+[36mINFO[0m[0005] Checking for cached layer dc2020.azurecr.io/todo/cache:93d083ce048dcb6165118a376a237185fd06c2e60bb34b67c9c525ad0601765e... 
+[36mINFO[0m[0005] Using caching version of cmd: RUN pip install -r requirements.txt 
+[36mINFO[0m[0005] Using files from context: [/workspace/source/app] 
+[36mINFO[0m[0005] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0005] Taking snapshot of full filesystem...        
+[36mINFO[0m[0005] WORKDIR /app                                 
+[36mINFO[0m[0005] cmd: workdir                                 
+[36mINFO[0m[0005] Changed working directory to /app            
+[36mINFO[0m[0005] Creating directory /app                      
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] Using files from context: [/workspace/source/app/requirements.txt] 
+[36mINFO[0m[0005] ADD app/requirements.txt /app                
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] RUN apk update                               
+[36mINFO[0m[0005] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] RUN pip install -r requirements.txt          
+[36mINFO[0m[0005] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0006] Taking snapshot of files...                  
+[36mINFO[0m[0007] Using files from context: [/workspace/source/app] 
+[36mINFO[0m[0007] ADD app/ /app                                
+[36mINFO[0m[0007] Taking snapshot of files...                  
+[36mINFO[0m[0007] CMD python app.py                            
+[36mINFO[0m[0007] No files changed in this command, skipping snapshotting. 
+error pushing image: getting tag for destination: repository can only contain the runes `abcdefghijklmnopqrstuvwxyz0123456789_-./`: smyaltamash/FlaskApp
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
