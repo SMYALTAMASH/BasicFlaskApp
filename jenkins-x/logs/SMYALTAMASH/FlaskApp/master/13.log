@@ -1,0 +1,146 @@
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ntzzg[0m
+{"level":"warn","ts":1581923459.396186,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581923459.3965962,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-2trnt[0m
+{"level":"warn","ts":1581923460.1759555,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581923460.177712,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-smyaltamash-flaskapp-master-96grp-9p2nh[0m
+{"level":"warn","ts":1581923467.34473,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581923472.4947464,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/SMYALTAMASH/FlaskApp.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:07fa35e77a03dabc35d9826b5fa4946ebcdd2a4d
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32msmyaltamash-flaskapp-master-96grp-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:3.6-alpine     
+2020/02/17 07:11:13 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Error while retrieving image from cache: getting file info: stat /workspace/sha256:546d79a1498f299ed2903d6ba0aceee86a1d5a519c096c807e1b186a8450ece1: no such file or directory 
+[36mINFO[0m[0003] Downloading base image python:3.6-alpine     
+2020/02/17 07:11:16 No matching credentials were found, falling back on anonymous
+[33mWARN[0m[0004] maintainer is deprecated, skipping           
+[36mINFO[0m[0004] Using files from context: [/workspace/source/app/requirements.txt] 
+[36mINFO[0m[0004] Checking for cached layer dc2020.azurecr.io/todo/cache:fc8417433279a96c3cac495612f7b14bbed6174114b05e6edcf351e1895cea27... 
+[36mINFO[0m[0005] No cached layer found for cmd RUN apk update 
+[36mINFO[0m[0005] Unpacking rootfs as cmd RUN apk update requires it. 
+[36mINFO[0m[0008] Taking snapshot of full filesystem...        
+[36mINFO[0m[0011] WORKDIR /app                                 
+[36mINFO[0m[0011] cmd: workdir                                 
+[36mINFO[0m[0011] Changed working directory to /app            
+[36mINFO[0m[0011] Creating directory /app                      
+[36mINFO[0m[0011] Taking snapshot of files...                  
+[36mINFO[0m[0011] Using files from context: [/workspace/source/app/requirements.txt] 
+[36mINFO[0m[0011] ADD app/requirements.txt /app                
+[36mINFO[0m[0011] Taking snapshot of files...                  
+[36mINFO[0m[0011] RUN apk update                               
+[36mINFO[0m[0011] cmd: /bin/sh                                 
+[36mINFO[0m[0011] args: [-c apk update]                        
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.gz
+v3.11.3-67-ge4e11f810f [http://dl-cdn.alpinelinux.org/alpine/v3.11/main]
+v3.11.3-60-gb3a10d424a [http://dl-cdn.alpinelinux.org/alpine/v3.11/community]
+OK: 11264 distinct packages available
+[36mINFO[0m[0015] Taking snapshot of full filesystem...        
+[36mINFO[0m[0016] RUN pip install -r requirements.txt          
+[36mINFO[0m[0016] cmd: /bin/sh                                 
+[36mINFO[0m[0016] args: [-c pip install -r requirements.txt]   
+[36mINFO[0m[0016] Pushing layer dc2020.azurecr.io/todo/cache:fc8417433279a96c3cac495612f7b14bbed6174114b05e6edcf351e1895cea27 to cache now 
+2020/02/17 07:11:30 pushed blob: sha256:479c49636905c2125e56002cc7f6cd6dc3a8e5fff831757411e655686fe8fd84
+2020/02/17 07:11:30 pushed blob: sha256:81b07e34e11f56230a4c95e78ce2ec872cde6285ef8d7448c5bbd10a411a969c
+2020/02/17 07:11:30 dc2020.azurecr.io/todo/cache:fc8417433279a96c3cac495612f7b14bbed6174114b05e6edcf351e1895cea27: digest: sha256:31d76287a27eb824895098fe67a555e97f5797a7d33f17889a4c1d1122852867 size: 428
+Collecting flask
+  Downloading Flask-1.1.1-py2.py3-none-any.whl (94 kB)
+Collecting flask-events
+  Downloading Flask-Events-0.5.1.tar.gz (10 kB)
+Collecting requests
+  Downloading requests-2.22.0-py2.py3-none-any.whl (57 kB)
+Collecting pytest
+  Downloading pytest-5.3.5-py3-none-any.whl (235 kB)
+Collecting pyflakes
+  Downloading pyflakes-2.1.1-py2.py3-none-any.whl (59 kB)
+Collecting Werkzeug>=0.15
+  Downloading Werkzeug-1.0.0-py2.py3-none-any.whl (298 kB)
+Collecting click>=5.1
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+Collecting Jinja2>=2.10.1
+  Downloading Jinja2-2.11.1-py2.py3-none-any.whl (126 kB)
+Collecting itsdangerous>=0.24
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting libhoney>=1.3.0
+  Downloading libhoney-1.9.0.tar.gz (18 kB)
+Collecting idna<2.9,>=2.5
+  Downloading idna-2.8-py2.py3-none-any.whl (58 kB)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.8-py2.py3-none-any.whl (125 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2019.11.28-py2.py3-none-any.whl (156 kB)
+Collecting chardet<3.1.0,>=3.0.2
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting attrs>=17.4.0
+  Downloading attrs-19.3.0-py2.py3-none-any.whl (39 kB)
+Collecting py>=1.5.0
+  Downloading py-1.8.1-py2.py3-none-any.whl (83 kB)
+Collecting packaging
+  Downloading packaging-20.1-py2.py3-none-any.whl (36 kB)
+Collecting more-itertools>=4.0.0
+  Downloading more_itertools-8.2.0-py3-none-any.whl (43 kB)
+Collecting pluggy<1.0,>=0.12
+  Downloading pluggy-0.13.1-py2.py3-none-any.whl (18 kB)
+Collecting wcwidth
+  Downloading wcwidth-0.1.8-py2.py3-none-any.whl (17 kB)
+Collecting importlib-metadata>=0.12; python_version < "3.8"
+  Downloading importlib_metadata-1.5.0-py2.py3-none-any.whl (30 kB)
+Collecting MarkupSafe>=0.23
+  Downloading MarkupSafe-1.1.1.tar.gz (19 kB)
+Collecting statsd
+  Downloading statsd-3.3.0-py2.py3-none-any.whl (11 kB)
+Collecting six
+  Downloading six-1.14.0-py2.py3-none-any.whl (10 kB)
+Collecting pyparsing>=2.0.2
+  Downloading pyparsing-2.4.6-py2.py3-none-any.whl (67 kB)
+Collecting zipp>=0.5
+  Downloading zipp-2.2.0-py36-none-any.whl (4.6 kB)
+Building wheels for collected packages: flask-events, libhoney, MarkupSafe
+  Building wheel for flask-events (setup.py): started
+  Building wheel for flask-events (setup.py): finished with status 'done'
+  Created wheel for flask-events: filename=Flask_Events-0.5.1-py3-none-any.whl size=13678 sha256=222f107fdb50f1aa6ec820283f88dd91ddba55b01a8afb14c3106c012a52e973
+  Stored in directory: /root/.cache/pip/wheels/fa/7e/fa/4e99b6a0bf6fea8f9246fcb8c06eb2837d0b6898cff79bcac0
+  Building wheel for libhoney (setup.py): started
+  Building wheel for libhoney (setup.py): finished with status 'done'
+  Created wheel for libhoney: filename=libhoney-1.9.0-py3-none-any.whl size=24798 sha256=25518864b71206f90c9769b7190798bbb05a009f974cfc832adb15926d5355f3
+  Stored in directory: /root/.cache/pip/wheels/8b/11/48/28f5c8d6bfa8c9bd376ef35274f717620750eedf2c75b486f0
+  Building wheel for MarkupSafe (setup.py): started
+  Building wheel for MarkupSafe (setup.py): finished with status 'done'
+  Created wheel for MarkupSafe: filename=MarkupSafe-1.1.1-py3-none-any.whl size=12629 sha256=02c6bbb73fc9ee67d1d0bf8d86708745b303aea2affbe5a0db4ae55dfe8998a3
+  Stored in directory: /root/.cache/pip/wheels/ca/85/2f/4c3a8ca6fb5eec7b43ec1e5666c7274dcdb86d6c32231aaa9d
+Successfully built flask-events libhoney MarkupSafe
+Installing collected packages: Werkzeug, click, MarkupSafe, Jinja2, itsdangerous, flask, idna, urllib3, certifi, chardet, requests, statsd, six, libhoney, flask-events, attrs, py, pyparsing, packaging, more-itertools, zipp, importlib-metadata, pluggy, wcwidth, pytest, pyflakes
+Successfully installed Jinja2-2.11.1 MarkupSafe-1.1.1 Werkzeug-1.0.0 attrs-19.3.0 certifi-2019.11.28 chardet-3.0.4 click-7.0 flask-1.1.1 flask-events-0.5.1 idna-2.8 importlib-metadata-1.5.0 itsdangerous-1.1.0 libhoney-1.9.0 more-itertools-8.2.0 packaging-20.1 pluggy-0.13.1 py-1.8.1 pyflakes-2.1.1 pyparsing-2.4.6 pytest-5.3.5 requests-2.22.0 six-1.14.0 statsd-3.3.0 urllib3-1.25.8 wcwidth-0.1.8 zipp-2.2.0
+[36mINFO[0m[0025] Taking snapshot of full filesystem...        
+[36mINFO[0m[0027] Pushing layer dc2020.azurecr.io/todo/cache:93d083ce048dcb6165118a376a237185fd06c2e60bb34b67c9c525ad0601765e to cache now 
+[36mINFO[0m[0027] Using files from context: [/workspace/source/app] 
+[36mINFO[0m[0027] ADD app/ /app                                
+[36mINFO[0m[0027] Taking snapshot of files...                  
+[36mINFO[0m[0028] CMD python app.py                            
+[36mINFO[0m[0028] No files changed in this command, skipping snapshotting. 
+2020/02/17 07:11:42 pushed blob: sha256:308ff1c1d23e52c9b8aa2c281b0c61e60d83776082a934caa5e2fc873e6c0bd5
+2020/02/17 07:11:43 pushed blob: sha256:87d3e828fcf8438c0dc655875567c44622355fc826191b3b586f4656a2a95df1
+2020/02/17 07:11:43 dc2020.azurecr.io/todo/cache:93d083ce048dcb6165118a376a237185fd06c2e60bb34b67c9c525ad0601765e: digest: sha256:96885b186da7c3c2e861d45f8705bdd9c3a8ef98a2b44c4629527aecd23734e5 size: 428
+error pushing image: getting tag for destination: repository can only contain the runes `abcdefghijklmnopqrstuvwxyz0123456789_-./`: smyaltamash/FlaskApp
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
