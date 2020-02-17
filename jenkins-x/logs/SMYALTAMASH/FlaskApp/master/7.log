@@ -1,0 +1,36 @@
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jhmv2[0m
+{"level":"warn","ts":1581936899.8218925,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581936899.8222651,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-k4lwm[0m
+{"level":"warn","ts":1581936900.9051301,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581936900.9069135,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-smyaltamash-flaskapp-master-dxkl8-59nfb[0m
+{"level":"warn","ts":1581936906.9616811,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581936912.749696,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/SMYALTAMASH/FlaskApp.git @ v0.0.10 in path /workspace/source"}
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:18629813306b19fe31b187a7df9636e197ddba87
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32msmyaltamash-flaskapp-master-dxkl8-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:3.6-alpine     
+[36mINFO[0m[0002] Error while retrieving image from cache: <empty transport.Error response> 
+[36mINFO[0m[0002] Downloading base image python:3.6-alpine     
+error building image: <empty transport.Error response>
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
