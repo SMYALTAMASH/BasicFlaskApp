@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: draft
-  tag: dev
+  repository: https://index.docker.io/v1/smyaltamash/flaskapp
+  tag: 0.0.4
   pullPolicy: IfNotPresent
 
 # define environment variables here as a map of key: value
